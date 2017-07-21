@@ -1,12 +1,16 @@
 {
+  "engines": {
+      "node": ">7.10.1"
+  },
+  "engineStrict": true,
   "name": "be-4",
   "version": "1.0.0",
-  "description": "",
+  "description": "Podible Project",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
   },
-  "author": "",
+  "author": "Mark Ledbetter",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",

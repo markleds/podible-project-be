@@ -9,19 +9,19 @@ injectTapEventPlugin();
 import './assets/css/normalize.css';
 import './assets/css/style.css';
 
-import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
+import Dashboard from './components/Dashboard';
 
-// const restrict = () => {
-//   if (!window.localStorage.getItem('token')) {
-//     browserHistory.push('/login');
-//   }
-// };
+const restrict = () => {
+  if (!window.localStorage.getItem('token')) {
+    browserHistory.push('/login');
+  }
+};
 
 ReactDom.render(
   <Router history={browserHistory}>
-    <Route path="/" component={SignUp} />
-    <Route path="/signin" component={SignIn} />
+    <Route path="/" component={SignIn} />
+    <Route path="/dashboard" component={Dashboard} onEnter={restrict}/>
   </Router>
   , document.getElementById('app')
 );
